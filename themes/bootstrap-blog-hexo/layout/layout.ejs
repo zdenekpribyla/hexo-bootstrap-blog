@@ -1,0 +1,33 @@
+<% if (page.layout==='foobar')  {%>
+<%- partial('foobar.ejs') %>
+<% } %>
+<html>
+<!-- Head tag -->
+<%- partial('_partial/head') %>
+<body>
+<!-- Menu -->
+<div class="top__menu"><%- partial('_partial/menu') %></div>
+<div class="container">
+    <!-- Blog header -->
+    <%- partial('_partial/header') %>
+    <div class="row">
+        <!-- Main Content -->
+        <div class="col-sm-8 blog-main">
+            <%- body %>
+        </div>
+        <!-- Sidebar -->
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+            <%- partial('_partial/mysidebar') %>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<%- partial('_partial/footer')%>
+<!-- After footer scripts -->
+<%- partial('_partial/after-footer') %>
+</body>
+</html>
+
+
+
+
